@@ -76,19 +76,3 @@
   justify-self: flex-end;
 }
 
-@media screen and (min-width: 320px) and (max-width: 880px) {
-  .navigation__container {
-    display: flex;
-    width: 100%;
-    background-color: rgba(62, 59, 100, 1);
-    flex-direction: row;
-    flex-wrap: nowrap;
-     box-shadow: none;
-     height: 0;
-    align-items: center;
-  }
-
-  .navigation__general{
-    display: none;
-  }
-}

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import MainPage from '../Main/MainPage';
@@ -10,6 +11,7 @@ import { CostActivitiesContextProvider } from '../context/CostContext';
 import { ListCostContextProvider } from '../context/ListCostContext';
 import { ListRevenueContextProvider } from '../context/ListRevenueContext';
 import { CurrentValueContextProvider } from '../context/CurrentValue';
+import { ChakraProvider} from '@chakra-ui/react';
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
 
@@ -40,6 +42,7 @@ function App() {
   };
 
   return (
+    <ChakraProvider >
     <CurrentValueContextProvider>
       <CostActivitiesContextProvider>
         <ListCostContextProvider>
@@ -74,6 +77,7 @@ function App() {
         </ListCostContextProvider>
       </CostActivitiesContextProvider>
     </CurrentValueContextProvider>
+    </ChakraProvider>
   );
 }
 

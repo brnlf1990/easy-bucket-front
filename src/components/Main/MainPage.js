@@ -11,7 +11,7 @@ import NewsList from './NewsList';
 import ModalListBalance from '../ModalWithForm/ModalListBalance';
 import CostListMobile from '../mobile/CostListMobile';
 import RevenueListMobile from '../mobile/RevenueListMobile';
-
+import NavigationMobile from '../mobile/NavigationMobile';
 import './MainPage.css';
 
 function MainPage({ handleLogOut }) {
@@ -44,7 +44,12 @@ function MainPage({ handleLogOut }) {
   return (
     <main className="MainPage">
       <Header className="header" />
-      <Navigation className="navitagion" handleLogOut={handleLogOut} />
+
+      {isMobile ? (
+        <NavigationMobile className="navitagion" handleLogOut={handleLogOut} />
+      ) : (
+        <Navigation className="navitagion" handleLogOut={handleLogOut} />
+      )}
       <CurrentBalance className="current_balance" />
       <CurrentCost className="current_cost" />
       {isMobile ? <RevenueListMobile /> : <RevenueList />}

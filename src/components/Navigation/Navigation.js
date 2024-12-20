@@ -15,7 +15,7 @@ function Navigation({ handleLogOut }) {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <div className="navigation">
+    <section className="navigation">
       <img className="navigation__logo" src={ebBucket} alt='navigation logo' />
 
       <nav className="navigation__container">
@@ -41,7 +41,7 @@ function Navigation({ handleLogOut }) {
         </a>
         <Footer className="footer" />
       </nav>
-    </div>
+    </section>
   );
 }
 
