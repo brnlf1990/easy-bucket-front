@@ -12,6 +12,8 @@ import ModalListBalance from '../ModalWithForm/ModalListBalance';
 import CostListMobile from '../mobile/CostListMobile';
 import RevenueListMobile from '../mobile/RevenueListMobile';
 import NavigationMobile from '../mobile/NavigationMobile';
+import { ChakraProvider} from '@chakra-ui/react';
+
 import './MainPage.css';
 
 function MainPage({ handleLogOut }) {
@@ -46,10 +48,14 @@ function MainPage({ handleLogOut }) {
       <Header className="header" />
 
       {isMobile ? (
+      <ChakraProvider>
         <NavigationMobile className="navitagion" handleLogOut={handleLogOut} />
+    </ChakraProvider>
+
       ) : (
         <Navigation className="navitagion" handleLogOut={handleLogOut} />
       )}
+
       <CurrentBalance className="current_balance" />
       <CurrentCost className="current_cost" />
       {isMobile ? <RevenueListMobile /> : <RevenueList />}

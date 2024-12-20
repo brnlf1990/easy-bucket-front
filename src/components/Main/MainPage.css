@@ -2,6 +2,7 @@
   display: grid;
   margin: auto;
   grid-template-rows: 4% 32% 18% 21% 37%;
+  background-color: rgba(41, 38, 78, 1);
   grid-template-columns: 26% 70%;
   max-height: 145vh;
   height: 100%;
@@ -20,6 +21,7 @@
 .header {
   grid-area: header;
   background-color: rgba(41, 38, 78, 1);
+  color: white;
   height: 60px;
 }
 
@@ -31,23 +33,28 @@
   grid-area: calendar;
   background-color: rgba(41, 38, 78, 1);
   height: 370px;
+  color: white;
 }
 
 .cost-list {
   grid-area: cost-list;
+  color: white;
 }
 
 .revenue-list {
   grid-area: revenue-list;
+  color: white;
 }
 
 .current_balance {
   grid-area: current-balance;
+  color: white;
   background-color: rgba(62, 59, 100, 1);
 }
 
 .current_cost {
   grid-area: current-cost;
+  color: white;
   background-color: rgba(62, 59, 100, 1);
 }
 .news {
