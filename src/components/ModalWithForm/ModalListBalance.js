@@ -69,7 +69,7 @@ function ModalListBalance({ isOpen, onRequestClose, day }) {
  
 
   return (
-    <div>
+    <section>
       <ModalWithForm
         name="modal__list"
         title={day.format('DD-MM-YYYY')}
@@ -113,6 +113,7 @@ function ModalListBalance({ isOpen, onRequestClose, day }) {
         />
         <span className="modal__list__input-value__error"></span>
         <button className="modal__list__submit-button">Salvar Atividade</button>
+        <div className='modal__list--stopper'> 
         <ul className="modal__list__container">
           {[...costList, ...revenueList]
             .filter(
@@ -141,8 +142,9 @@ function ModalListBalance({ isOpen, onRequestClose, day }) {
               </li>
             ))}
         </ul>
+        </div>
       </ModalWithForm>
-    </div>
+    </section>
   );
 }
 

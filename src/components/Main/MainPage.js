@@ -1,5 +1,5 @@
 import '../App/App.css';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../Header/Header';
 import Calendar from './Calendar';
 import Navigation from '../Navigation/Navigation';
@@ -8,14 +8,29 @@ import CurrentCost from './CurrentCost';
 import RevenueList from './RevenueList';
 import CurrentBalance from './CurrentBalance';
 import NewsList from './NewsList';
-import Footer from '../Navigation/Footer';
 import ModalListBalance from '../ModalWithForm/ModalListBalance';
+import CostListMobile from '../mobile/CostListMobile';
+import RevenueListMobile from '../mobile/RevenueListMobile';
+
 import './MainPage.css';
 
 function MainPage({ handleLogOut }) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedDay, setSelectedDay] = useState(null);
   const [activities, setActivities] = useState({});
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 880);
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const openModal = (day) => {
     setSelectedDay(day);
@@ -27,12 +42,12 @@ function MainPage({ handleLogOut }) {
     setSelectedDay(null);
   };
   return (
-    <div className="MainPage">
+    <main className="MainPage">
       <Header className="header" />
       <Navigation className="navitagion" handleLogOut={handleLogOut} />
       <CurrentBalance className="current_balance" />
       <CurrentCost className="current_cost" />
-      <RevenueList className="revenue_list" />
+      {isMobile ? <RevenueListMobile /> : <RevenueList />}
       <NewsList className="news" />
       <Calendar className="calendar" openModal={openModal} />
 
@@ -46,9 +61,9 @@ function MainPage({ handleLogOut }) {
         />
       )}
 
-      <CostList className="cost_list" />
+      {isMobile ? <CostListMobile /> : <CostList />}
       <footer className="footer__mobile">© 2024 Bruno Lopes Furuya </footer>
-    </div>
+    </main>
   );
 }
 

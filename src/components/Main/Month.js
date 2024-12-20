@@ -22,7 +22,7 @@ function MonthCard({ month, currentYear, prevMonth, nextMonth, openModal }) {
   }, [month, currentYear]);
 
   return (
-    <div className="month-card">
+    <section className="month-card">
       <div className="month-card__header-container">
         <button className="month-card__prev-button" onClick={prevMonth}>
           Anterior{' '}
@@ -51,7 +51,7 @@ function MonthCard({ month, currentYear, prevMonth, nextMonth, openModal }) {
           ))}
         </div>
       ))}
-    </div>
+    </section>
   );
 }
 

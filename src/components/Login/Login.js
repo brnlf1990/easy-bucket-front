@@ -80,6 +80,7 @@ function Login({ handleLoggedIn }) {
               name="email"
               placeholder="E-mail"
               className="login__email"
+              required
               onChange={(e) => setEmail(e.target.value)}
               value={email}
             />
@@ -87,6 +88,7 @@ function Login({ handleLoggedIn }) {
               name="password"
               type="password"
               placeholder="Senha"
+              required
               className="login__passoword"
               onChange={(e) => setPassword(e.target.value)}
               value={password}

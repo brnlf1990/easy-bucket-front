@@ -3,7 +3,7 @@ import construction from '../../images/construction.png';
 
 function Activities() {
   return (
-    <div className="activities__container">
+    <section className="activities__container">
       <img
         alt="imagem construção"
         src={construction}
@@ -15,7 +15,7 @@ function Activities() {
           Volte aqui.
         </a>
       </span>
-    </div>
+    </section>
   );
 }
 

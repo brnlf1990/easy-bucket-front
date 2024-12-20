@@ -1,4 +1,5 @@
 .modal {
+  height: 30px;
 }
 .modal__list {
   display: grid;

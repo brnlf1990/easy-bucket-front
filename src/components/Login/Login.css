@@ -146,14 +146,14 @@
   display: none;
 }
 
-.login__signup_link{
-  color: #007bff; 
+.login__signup_link {
+  color: #007bff;
   text-decoration: none;
 }
 
 .login__signup_link:hover {
-  color: #0056b3; 
-  text-decoration: underline; 
+  color: #0056b3;
+  text-decoration: underline;
 }
 @media screen and (min-width: 320px) and (max-width: 550px) {
   .login {
@@ -164,7 +164,9 @@
   .login__title {
     font-size: 28px;
   }
-
+  .login__error-message {
+    font-size: 14px;
+  }
   .login-mobile__logo {
     display: block;
     width: 38%;
@@ -209,7 +211,7 @@
     display: none;
   }
 
-  .login__register{
+  .login__register {
     font-size: 16px;
   }
 }

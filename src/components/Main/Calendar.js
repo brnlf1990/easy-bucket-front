@@ -43,7 +43,7 @@ function Calendar({ openModal }) {
   };
 
   return (
-    <div className="calendar">
+    <section className="calendar">
       <h1 className="calendar__title">Calendario de contas</h1>
       <div className="calendar__container">
         <MonthCard
@@ -55,7 +55,7 @@ function Calendar({ openModal }) {
           openModal={openModal}
         />
       </div>
-    </div>
+    </section>
   );
 }
 

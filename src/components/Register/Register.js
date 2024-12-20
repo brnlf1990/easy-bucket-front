@@ -59,12 +59,14 @@ function Register() {
               className="register__input register__input--name"
               id="name"
               value={name}
+              required
               onChange={(e) => setName(e.target.value)}
             />
 
             <input
               name="about"
               placeholder="Sobre"
+              required
               className="register__input register__input--about"
               value={about}
               onChange={(e) => setAbout(e.target.value)}
@@ -75,6 +77,7 @@ function Register() {
               placeholder="Avatar"
               className="register__input register__input--avatar"
               value={avatar}
+              required
               onChange={(e) => setAvatar(e.target.value)}
             />
 
@@ -93,6 +96,7 @@ function Register() {
               placeholder="Senha"
               className="register__input register__input--passoword"
               value={password}
+              required
               onChange={(e) => setPassword(e.target.value)}
             />
 

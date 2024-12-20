@@ -1,19 +1,20 @@
 .MainPage {
   display: grid;
   margin: auto;
-  grid-template-rows: 4% 19% 12% 13%;;
+  grid-template-rows: 4% 32% 18% 21% 37%;
   grid-template-columns: 26% 70%;
-  height: 80%;
+  max-height: 145vh;
+  height: 100%;
   overflow: hidden;
   grid-template-areas:
     'menu header '
     'menu calendar'
     'current-balance calendar'
-    'current-cost cost-list'
-    'news revenue-list';
+    'current-cost revenue-list'
+    'news cost-list';
 }
 
-.footer__mobile{
+.footer__mobile {
   display: none;
 }
 .header {
@@ -32,14 +33,12 @@
   height: 370px;
 }
 
-.cost-list__container {
+.cost-list {
   grid-area: cost-list;
-  background-color: rgba(62, 59, 100, 1);
 }
 
-.revenue-list__container {
+.revenue-list {
   grid-area: revenue-list;
-  background-color: rgba(62, 59, 100, 1);
 }
 
 .current_balance {
@@ -60,10 +59,12 @@
   .MainPage {
     display: grid;
     margin: auto;
-    grid-template-rows:
-    2% 7% 23% 8% 9% 11% 16% 20% 1%;
-    grid-template-columns: 100%; 
-    overflow: hidden;
+    max-height: 300vh;
+    height: 100%;
+    max-width: 880px;
+    width: 100%;
+    grid-template-rows: 3% 6% 18% 8% 8% 18% 18% 11% 4%;
+    grid-template-columns: 100%;
     grid-template-areas:
       'header'
       'menu'
@@ -99,7 +100,8 @@
 
   .calendar {
     grid-area: calendar;
-    background-color: rgba(41, 38, 78, 1);
+    width: 95%;
+    background-color: rgba(62, 59, 100, 1);
     height: 370px;
     color: white;
     font-size: 16px;
@@ -146,7 +148,7 @@
     text-align: center;
     justify-self: baseline;
   }
-  .footer__mobile{
+  .footer__mobile {
     grid-area: footer;
   }
 }

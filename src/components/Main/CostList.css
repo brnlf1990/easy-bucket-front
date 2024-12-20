@@ -5,7 +5,9 @@
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(13, 13, 75, 0.384);
-  overflow-y: auto; 
+  overflow-y: auto;
+  height: 30%;
+  background-color: rgba(62, 59, 100, 1);
 }
 
 .cost-list__title {
@@ -19,6 +21,6 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.cost__title{
-  color: #55BED2;
+.cost__title {
+  color: #55bed2;
 }

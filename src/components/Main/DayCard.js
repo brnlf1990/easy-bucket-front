@@ -8,13 +8,13 @@ function DayCard({day, month, year, openModal }) {
     
   
     return (
-      <div onClick={() => openModal(day)} 
+      <section onClick={() => openModal(day)} 
         className={`day-card ${isToday ? "day-card--today" : ""} ${
           !isCurrentMonth ? "day-card--inactive" : ""
         }`}
       >
         {day.format("D")}
-      </div>
+      </section>
     );
   }
 

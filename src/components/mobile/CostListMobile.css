@@ -1,0 +1,41 @@
+.cost-list-mobile{
+    height: 90%;
+}
+
+.cost-list-mobile__container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 82%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(13, 13, 75, 0.384);
+    overflow:scroll;
+    
+  }
+  
+  .cost__title {
+    color: #55bed2;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .cost-list-mobile__item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: rgba(62, 59, 100, 1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cost-list-mobile__data {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .cost-list-mobile__details {
+    font-size: 14px;
+    color: white;
+  }
+  
