@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && scp -i ~/.ssh/id_ed25519 -r ./build/* brnlf1990@easy-bucket.online:/home/brnlf1990/easybucket-front",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint ."
@@ -48,5 +48,6 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "eslint": "^8.57.1"
-  }
+  },
+  "homepage": "https://easy-bucket.online"
 }

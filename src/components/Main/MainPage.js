@@ -1,3 +1,5 @@
+import { ChakraProvider } from '@chakra-ui/react';
+
 import '../App/App.css';
 import React, { useEffect, useState } from 'react';
 import Header from '../Header/Header';
@@ -12,7 +14,6 @@ import ModalListBalance from '../ModalWithForm/ModalListBalance';
 import CostListMobile from '../mobile/CostListMobile';
 import RevenueListMobile from '../mobile/RevenueListMobile';
 import NavigationMobile from '../mobile/NavigationMobile';
-import { ChakraProvider} from '@chakra-ui/react';
 
 import './MainPage.css';
 
@@ -48,10 +49,12 @@ function MainPage({ handleLogOut }) {
       <Header className="header" />
 
       {isMobile ? (
-      <ChakraProvider>
-        <NavigationMobile className="navitagion" handleLogOut={handleLogOut} />
-    </ChakraProvider>
-
+        <ChakraProvider>
+          <NavigationMobile
+            className="navitagion-mobile"
+            handleLogOut={handleLogOut}
+          />
+        </ChakraProvider>
       ) : (
         <Navigation className="navitagion" handleLogOut={handleLogOut} />
       )}

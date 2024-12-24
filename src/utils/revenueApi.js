@@ -1,4 +1,7 @@
-export const BASE_URL = 'http://localhost:3001';
+export const BASE_URL =
+  process.env.NODE_ENV === 'production'
+    ? 'https://api.easy-bucket.online'
+    : 'http://localhost:3001';
 
 export const setAuthorizationToken = (token) => {
   localStorage.setItem('token', token);
@@ -8,13 +11,12 @@ export const getTotalRevenueValue = () => {
   return fetch(`${BASE_URL}/revenue/total`, {
     method: 'GET',
     headers: {
-      'Accept': 'application/json',
+      Accept: 'application/json',
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${localStorage.getItem('token')}`,
+      Authorization: `Bearer ${localStorage.getItem('token')}`,
     },
   }).then((response) => {
     if (response.ok) {
-
       return response.json().then((data) => {
         return data;
       });
@@ -26,9 +28,9 @@ export const getAllRevenue = () => {
   return fetch(`${BASE_URL}/revenue`, {
     method: 'GET',
     headers: {
-      'Accept': 'application/json',
+      Accept: 'application/json',
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${localStorage.getItem('token')}`,
+      Authorization: `Bearer ${localStorage.getItem('token')}`,
     },
   })
     .then((response) => {
@@ -43,16 +45,16 @@ export const getAllRevenue = () => {
     });
 };
 
-export const addRevenueValue = ({date, description, value, category }) => {
+export const addRevenueValue = ({ date, description, value, category }) => {
   return fetch(`${BASE_URL}/revenue`, {
     method: 'POST',
     headers: {
-      'Accept': 'application/json',
+      Accept: 'application/json',
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${localStorage.getItem('token')}`,
+      Authorization: `Bearer ${localStorage.getItem('token')}`,
     },
     body: JSON.stringify({
-      date:date,
+      date: date,
       description: description,
       value: value,
       category: category,
@@ -77,7 +79,7 @@ export const editRevenuetValue = (
   return fetch(`${BASE_URL}/${valueId}`, {
     method: 'PATCH',
     headers: {
-      'Accept': 'application/json',
+      Accept: 'application/json',
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({

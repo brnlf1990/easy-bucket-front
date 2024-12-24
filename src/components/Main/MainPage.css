@@ -67,11 +67,11 @@
     display: grid;
     margin: auto;
     max-height: 300vh;
-    height: 100%;
+    height: 214vh;
     background-color:  rgba(62, 59, 100, 1);
-    max-width: 880px;
+    max-width: 100vh;
     width: 100%;
-    grid-template-rows: 3% 6% 18% 8% 8% 18% 18% 11% 4%;
+    grid-template-rows: 4% 4% 33% 8% 10% 16% 17% 10% 4%;
     grid-template-columns: 100%;
     grid-template-areas:
       'header'
@@ -97,7 +97,10 @@
     font-weight: bold;
   }
 
-  .navigation {
+  .navitagion{
+    display: none;
+  }
+  .navitagion-mobile {
     grid-area: menu;
     background-color: rgba(62, 59, 100, 1);
     padding: 10px;
@@ -108,7 +111,7 @@
 
   .calendar {
     grid-area: calendar;
-    width: 95%;
+    width: 90%;
     background-color: rgba(62, 59, 100, 1);
     height: 370px;
     color: white;

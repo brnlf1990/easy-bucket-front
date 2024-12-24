@@ -21,6 +21,7 @@ const NavigationMobile = ({handleLogOut}) => {
   const isActive = (path) => location.pathname === path;
 
   return (
+    
     <Menu>
       <MenuButton as={Button} variant="outline" size="sm" color={'white'}>
         Open

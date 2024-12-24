@@ -1,4 +1,7 @@
-export const BASE_URL = 'http://localhost:3001';
+export const BASE_URL = 
+  process.env.NODE_ENV === 'production'
+    ? 'https://api.easy-bucket.online'
+    : 'http://localhost:3001';
 
 export const register = ({ email, password, name, about, avatar }) => {
   return fetch(`${BASE_URL}/signup`, {

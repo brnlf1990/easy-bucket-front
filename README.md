@@ -92,7 +92,9 @@ Há também uma janela de notícias, onde são exibidas diversas informações r
 <p> <img  src="./gif/news.gif"/> </p>
 
 # Acesso ao projeto
-🏗️ Este setor esta em construção.
+Acesse o link abaixo para testar:
+
+https://www.easy-bucket.online/
 
 # Autores
  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/114805570?s=400&u=a591c1f671119e0c150e6a5178465b744cd8c912&v=4" width=115><br><sub>Bruno Lopes Furuya</sub>](https://github.com/brnlf1990) 
