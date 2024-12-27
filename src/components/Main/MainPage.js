@@ -23,6 +23,9 @@ function MainPage({ handleLogOut }) {
   const [activities, setActivities] = useState({});
   const [isMobile, setIsMobile] = useState(false);
 
+  /*para deixar o site mais responsivo, criei um arquivo a parte e
+fiz com que ele imprimisse quando atingir certa TbKeyframeAlignHorizontal.*/
+
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 880);
 

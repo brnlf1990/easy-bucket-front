@@ -1,7 +1,7 @@
 import React from "react";
 import moment from "moment";
 import "./DayCard.css"
-function DayCard({day, month, year, openModal }) {
+function DayCard({day, month,  openModal }) {
     const isToday = moment().isSame(day, "day"); 
     const isCurrentMonth = day.month() === month;
 

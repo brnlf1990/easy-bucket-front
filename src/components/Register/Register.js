@@ -16,7 +16,7 @@ function Register() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
+//toda informação já é registrada nesse componente.
     auth
       .register({ email, password, name, about, avatar })
       .then((data) => {
@@ -30,7 +30,7 @@ function Register() {
       })
       .catch((errors) => {
 
-        setErrors('Preeccher corretamente os campos');
+        setErrors(errors,'Preeccher corretamente os campos');
       });
   };
 
