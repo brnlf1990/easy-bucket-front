@@ -27,6 +27,7 @@ function Login({ handleLoggedIn }) {
           );
           return;
         }
+        //aqui é onde o token é guardado. Em Navigation.js foi onde coloquei para o usuário sair e deletar o token do browser.
         if (response.ok) {
           response.json().then((data) => {
             if (data) {
@@ -35,7 +36,6 @@ function Login({ handleLoggedIn }) {
               setCurrentUser(data.user);
               navigate('/main');
               handleLoggedIn();
-
             }
           });
         }

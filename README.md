@@ -94,6 +94,7 @@ Há também uma janela de notícias, onde são exibidas diversas informações r
 # Acesso ao projeto
 Acesse o link abaixo para testar:
 
+
 https://www.easy-bucket.online/
 
 # Autores

@@ -7,7 +7,7 @@ function Navigation({ handleLogOut }) {
   const navigate = useNavigate();
   const location = useLocation();
   function signOut() {
-    localStorage.removeItem('token');
+    localStorage.removeItem('token');//aqui é onde o token é removido.
     handleLogOut();
     navigate('/signin');
   }
